@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-width: 380px;
+}
+
+
+header{
+    width: 100%;
+    background-color: rgba(150, 147, 146, 0.76);
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+    transition: 0.5s;
+}
+
+header:hover{
+    box-shadow: 1em 0.1em 2em 1em rgb(153, 151, 151);
+    background-color: rgba(163, 163, 163, 0.322);
+}
+
+.slider{
+    display: flex;
+}
+
+.slides{
+    width: 18em;
+    height: 13em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0.8em;
+}
+
+.one{
+    background-image: url('1.jpg');
+}
+.two{
+    background-image: url('2.jpg');
+}
+.three{
+    background-image: url('3.jpg');
+}
+.four{
+    background-image: url('5.jpg');
+}
+
+.main{
+    margin-top: 15em;
+}
+
+.flex{
+    margin: 1em;
+}
+
+footer{
+    text-align: center;
+    background-color: rgba(150, 147, 146, 0.76);
+    padding: 2em;
+}
+
+ul > li{
+    list-style: none;
+    display: inline;
+    margin: 0.9em;
+}
+
+@media screen and (min-width:901px) {
+
+    .stay{
+        display: flex;
+        justify-content: center;
+    }
+
+    .stay > * {
+        flex: 1;
+    }
+
+    #slideshow{
+        display: none;
+    }
+        
+    .slide{
+        position: absolute;
+        width: 19.6em;
+        height: 13em;
+        background-position: center;
+        background-size: cover;
+        margin: 0 auto;
+        transition: opacity 400ms;
+        z-index: 1;
+    }
+
+    .main{
+        display: flex;
+        flex: 1 1 33%;
+        margin-top: 0;
+    }
+    
+}
+
+@media screen and (max-width:900px) {
+
+    .stay{
+        display: none;
+    }
+
+    #slideshow{
+        position: relative;
+        max-width: 19em;
+        margin: 1em auto;
+    }
+        
+    .slide{
+        position: absolute;
+        width: 19.6em;
+        height: 13em;
+        background-position: center;
+        background-size: cover;
+        margin: 0 auto;
+        transition: opacity 400ms;
+        z-index: 1;
+    }
+
+    main{
+        margin-top: 15em;
+    }
+    
+}
